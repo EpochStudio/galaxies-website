@@ -12,7 +12,7 @@
 		},
 	});
 
-	fetch("https://github.com/EpochStudio")
+	fetch("https://galaxies.silentjungle.tk/devteam")
 		.then(function (response) {
 			return response.json();
 		})
