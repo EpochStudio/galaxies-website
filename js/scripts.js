@@ -3,7 +3,7 @@
 		el: "#app",
 		data: {
 			team: [
-				{ name: "Uthsho", detail: "Founder", avatar: "https://cdn.discordapp.com/avatars/747870498221719592/a_ec11c86942d7d03147864c24880165ab.gif?size=4096" },
+				{ name: "Uthsho", detail: "Founder", avatar: "./images/uthsho.gif" },
 				{ name: "chrissch_dhil.dev", detail: "Lead Developer In-charge", avatar: "https://cdn.discordapp.com/avatars/592663451978039298/b5ace6ed0d2a2f4b07ba9a207c4e6f76.png?size=4096" },
 				{ name: "\"Shimeji\" Rin", detail: "Acting Lead Developer", avatar: "https://cdn.discordapp.com/avatars/586913853804249090/a_81ed93fe08e29db876f0bbfbc67abd1e.gif?size=4096" },
 				{ name: "oBrent", detail: "Web Developer", avatar: "https://cdn.discordapp.com/avatars/718489111765319692/52492c9631e68fe6902257ec664750c9.png?size=4096" },
