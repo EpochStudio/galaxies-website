@@ -6,7 +6,6 @@
 				{ name: "Uthsho", detail: "Founder", avatar: "./images/uthsho.gif" },
 				{ name: "chrissch_dhil.dev", detail: "Lead Developer In-charge", avatar: "./images/chrissch.png" },
 				{ name: "\"Shimeji\" Rin", detail: "Acting Lead Developer", avatar: "./images/rin.png" },
-				{ name: "oBrent", detail: "Web Developer", avatar: "./images/obrent.png" },
 				{ name: "Aniket", detail: "Bot Developer", avatar: "./images/aniket.png" }
 			],
 		},
