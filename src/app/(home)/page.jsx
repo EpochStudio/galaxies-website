@@ -182,7 +182,7 @@ export default function Home() {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-lg-12 ">
               <Team team={team} />
             </div>
           </div>
