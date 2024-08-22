@@ -28,15 +28,15 @@ const Team = ({ team }) => {
             team.map(async (user) => {
                 user.avatar = await fetchAvatar(user.id);
             });
-            setTeam(team);
         }
         loadAvatar();
+        setTeam(team);
     }, []);
     return (
         <>
-        {
-            console.log(newTeam.map((user) => user.avatar))
-        }
+            {
+                console.log(newTeam.map((user) => user.avatar))
+            }
             {
                 newTeam.map((user) => <div key={user.name} className="team-member">
                     <div className="image-wrapper feature-img">
