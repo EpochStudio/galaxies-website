@@ -1,12 +1,20 @@
+import { getDiscordAvatarUrl } from "@/utils/discordAPI";
 import getConfig from "next/config";
 const { publicRuntimeConfig } = getConfig();
 
 export default function Home() {
-  const { team } = publicRuntimeConfig;
+  let { team } = publicRuntimeConfig;
+
+  // Fetch the avatar URLs for the team members
+  (async () => {
+    team = await Promise.all(team.map(async (user) => {
+      user.avatar = (await getDiscordAvatarUrl(user.id)) || user.avatar;
+      return user;
+    }));
+  })();
 
   return (
     <>
-
       <header id="header" className="header">
         <div className="header-content">
           <div className="container">
