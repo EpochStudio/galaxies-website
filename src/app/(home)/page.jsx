@@ -8,11 +8,11 @@ export default function Home() {
   // Fetch the avatar URLs for the team members
   (async () => {
     team = await Promise.all(team.map(async (user) => {
-      user.avatar = (await getDiscordAvatarUrl(user.id)) || user.avatar;
+      user.avatar = (await getDiscordAvatarUrl(user.id));
       return user;
     }));
   })();
-
+  
   return (
     <>
       <header id="header" className="header">
