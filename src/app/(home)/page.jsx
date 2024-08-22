@@ -1,4 +1,4 @@
-import { getDiscordAvatarUrl } from "@/utils/discordAPI";
+import { getDiscordAvatarUrl } from "../../utils/discordAPI";
 import getConfig from "next/config";
 const { publicRuntimeConfig } = getConfig();
 
