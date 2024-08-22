@@ -1,6 +1,12 @@
+"use client"
+
 import Link from "next/link"
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+    const pathname = usePathname();
+    console.log(pathname);
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
 
@@ -23,13 +29,22 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <a className="nav-link page-scroll" href="#header">Home <span className="sr-only">(current)</span></a>
+                        {pathname == "/" ? (
+                            <a className="nav-link page-scroll" href="#header">Home <span className="sr-only">(current)</span></a>) : (
+                            <Link className="nav-link" href="/">Home <span className="sr-only">(current)</span></Link>
+                        )}
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link page-scroll" href="#features">Features</a>
+                        {pathname == "/" ? (
+                            <a className="nav-link page-scroll" href="#features">Features</a>) : (
+                            <Link className="nav-link" href="/#features">Features</Link>
+                        )}
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link page-scroll" href="#pricing">Premium</a>
+                        {pathname == "/" ? (
+                            <a className="nav-link page-scroll" href="#pricing">Premium</a>) : (
+                                <Link className="nav-link" href="/#pricing">Premium</Link>
+                            )}
                     </li>
                     <li className="nav-item">
                         <a className="nav-link page-scroll"

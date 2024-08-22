@@ -6,13 +6,6 @@ export default function Home() {
 
   return (
     <>
-      <div className="spinner-wrapper">
-        <div className="spinner">
-          <div className="bounce1"></div>
-          <div className="bounce2"></div>
-          <div className="bounce3"></div>
-        </div>
-      </div>
 
       <header id="header" className="header">
         <div className="header-content">
@@ -192,12 +185,12 @@ export default function Home() {
             <div className="col-lg-12">
               {
                 team.map((user) => <div key={user.name} className="team-member">
-                    <div className="image-wrapper feature-img">
-                      <img className="img-fluid" src={user.avatar} alt="alternative" />
-                    </div>
-                    <p className="p-large"><strong>{user.name}</strong></p>
-                    <p className="job-title">{user.detail}</p>
+                  <div className="image-wrapper feature-img">
+                    <img className="img-fluid" src={user.avatar} alt="alternative" />
                   </div>
+                  <p className="p-large"><strong>{user.name}</strong></p>
+                  <p className="job-title">{user.detail}</p>
+                </div>
                 )
               }
             </div>

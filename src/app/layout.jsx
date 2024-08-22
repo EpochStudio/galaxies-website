@@ -6,6 +6,7 @@ import "./globals.css";
 
 import GoogleScripts from "@/Components/GoogleScripts";
 import Navbar from "@/Components/Navbar";
+import Preloader from '@/Components/Preloader';
 
 const font = Raleway({
   weight: ['400', '600', '700'],
@@ -18,7 +19,7 @@ export const metadata = {
   description: "Galaxies. A multipurpose utility bot dependable to manage events and performs tasks seamlessly.",
   authors: [{ name: 'chrissch_dhil.dev' }],
 
-  metadataBase: new URL('http://galaxies-website.vercel.app/'),
+  metadataBase: new URL('http://localhost:3000/'),
   openGraph: {
     title: 'Galaxies Discord bot',
     description: 'Galaxies. A multipurpose utility bot dependable to manage events and performs tasks seamlessly.',
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
       <body className={font.className} data-spy="scroll" data-target=".fixed-top">
         <GoogleScripts />
 
+        <Preloader />
         <Navbar />
         {children}
 

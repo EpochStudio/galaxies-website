@@ -1,16 +1,4 @@
 (function ($) {
-	// Preloader
-	$(window).on("load", function () {
-		var preloaderFadeOutTime = 500;
-		function hidePreloader() {
-			var preloader = $(".spinner-wrapper");
-			setTimeout(function () {
-				preloader.fadeOut(preloaderFadeOutTime);
-			}, 500);
-		}
-		hidePreloader();
-	});
-
 	$(window).on("scroll load", function () {
 		if ($(".navbar").offset().top > 60) {
 			$(".fixed-top").addClass("top-nav-collapse");
@@ -20,19 +8,25 @@
 	});
 
 	$(function () {
-		$(document).on("click", "a.page-scroll", function (event) {
-			var $anchor = $(this);
-			$("html, body")
-				.stop()
-				.animate(
-					{
-						scrollTop: $($anchor.attr("href")).offset().top,
-					},
-					600,
-					"easeInOutExpo"
-				);
-			event.preventDefault();
-		});
+			$(document).on("click", "a.page-scroll", function (event) {
+				var $anchor = $(this);
+				var target = $($anchor.attr("href"));
+
+				if (target.length) {
+					$("html, body")
+						.stop()
+						.animate(
+							{
+								scrollTop: target.offset().top,
+							},
+							600,
+							"easeInOutExpo"
+						);
+				} else {
+					console.error("Target element not found:", $anchor.attr("href"));
+				}
+				event.preventDefault();
+			});
 	});
 
 	$(".navbar-nav li a").on("click", function (event) {
