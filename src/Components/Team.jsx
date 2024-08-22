@@ -1,9 +1,10 @@
 "use client"
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 const Team = ({ team }) => {
+    const [newTeam, setTeam] = useState(team);
 
     async function fetchAvatar(userId) {
         try {
@@ -27,16 +28,17 @@ const Team = ({ team }) => {
             team.map(async (user) => {
                 user.avatar = await fetchAvatar(user.id);
             });
+            setTeam(team);
         }
         loadAvatar();
     }, []);
     return (
         <>
         {
-            console.log(team.map((user) => user.avatar))
+            console.log(newTeam.map((user) => user.avatar))
         }
             {
-                team.map((user) => <div key={user.name} className="team-member">
+                newTeam.map((user) => <div key={user.name} className="team-member">
                     <div className="image-wrapper feature-img">
                         <img className="img-fluid" src={user.avatar} alt="alternative" />
                     </div>
