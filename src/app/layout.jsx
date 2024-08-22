@@ -19,7 +19,7 @@ export const metadata = {
   description: "Galaxies. A multipurpose utility bot dependable to manage events and performs tasks seamlessly.",
   authors: [{ name: 'chrissch_dhil.dev' }],
 
-  metadataBase: new URL('http://localhost:3000/'),
+  metadataBase: new URL('https://galaxies-website.vercel.app/'),
   openGraph: {
     title: 'Galaxies Discord bot',
     description: 'Galaxies. A multipurpose utility bot dependable to manage events and performs tasks seamlessly.',
