@@ -32,6 +32,9 @@ const Team = ({ team }) => {
     }, []);
     return (
         <>
+        {
+            console.log(team.map((user) => user.avatar))
+        }
             {
                 team.map((user) => <div key={user.name} className="team-member">
                     <div className="image-wrapper feature-img">
