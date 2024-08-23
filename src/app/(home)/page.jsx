@@ -1,17 +1,9 @@
-import { getDiscordAvatarUrl } from "@/utils/discordAPI";
+import Team from "@/Components/Team";
 import getConfig from "next/config";
 const { publicRuntimeConfig } = getConfig();
 
 export default function Home() {
-  let { team } = publicRuntimeConfig;
-
-  // Fetch the avatar URLs for the team members
-  (async () => {
-    team = await Promise.all(team.map(async (user) => {
-      user.avatar = (await getDiscordAvatarUrl(user.id)) || user.avatar;
-      return user;
-    }));
-  })();
+  const { team } = publicRuntimeConfig;
 
   return (
     <>
@@ -190,17 +182,8 @@ export default function Home() {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-12">
-              {
-                team.map((user) => <div key={user.name} className="team-member">
-                  <div className="image-wrapper feature-img">
-                    <img className="img-fluid" src={user.avatar} alt="alternative" />
-                  </div>
-                  <p className="p-large"><strong>{user.name}</strong></p>
-                  <p className="job-title">{user.detail}</p>
-                </div>
-                )
-              }
+            <div className="col-lg-12 ">
+              <Team team={team} />
             </div>
           </div>
         </div>
