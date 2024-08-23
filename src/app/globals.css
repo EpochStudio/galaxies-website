@@ -226,6 +226,7 @@ a.white {
   color: white;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  font: 600 0.875rem / 0.875rem Raleway, sans-serif;
 }
 .navbar-nav .dropdown-menu .dropdown-item:hover {
   background-color: inherit;

@@ -64,8 +64,8 @@ const Navbar = () => {
                             Terms
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <Link className="dropdown-item mt-1 mb-2" href="/privacy">Privacy Policy</Link>
-                            <Link className="dropdown-item" href="/tos">Terms of Service</Link>
+                            <Link className="nav-link dropdown-item mt-1 mb-2" href="/privacy">Privacy Policy</Link>
+                            <Link className="nav-link dropdown-item" href="/tos">Terms of Service</Link>
                         </div>
                     </li>
                 </ul>

@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 
 
-const Team = ({ team }) => {
-    const [newTeam, setTeam] = useState(team);
+const Team = ({ team: initialTeam }) => {
+    const [team, setTeam] = useState([]);
 
     async function fetchAvatar(userId) {
         try {
@@ -25,20 +25,22 @@ const Team = ({ team }) => {
 
     useEffect(() => {
         async function loadAvatar() {
-            team.map(async (user) => {
-                user.avatar = await fetchAvatar(user.id);
-            });
+            const updatedTeam = await Promise.all(
+                initialTeam.map(async (user) => {
+                    const avatar = await fetchAvatar(user.id);
+                    return { ...user, avatar: avatar || user.avatar };
+                })
+            );
+            setTeam(updatedTeam);
         }
         loadAvatar();
-        setTeam(team);
-    }, []);
+    }, [initialTeam]);
     return (
         <>
-            {
-                console.log(newTeam.map((user) => user.avatar))
-            }
-            {
-                newTeam.map((user) => <div key={user.name} className="team-member">
+            {team.length === 0 ? (
+                <p>Fetching details...</p>
+            ) : (
+                team.map((user) => <div key={user.name} className="team-member">
                     <div className="image-wrapper feature-img">
                         <img className="img-fluid" src={user.avatar} alt="alternative" />
                     </div>
@@ -46,7 +48,7 @@ const Team = ({ team }) => {
                     <p className="job-title">{user.detail}</p>
                 </div>
                 )
-            }
+            )}
         </>
     )
 }
