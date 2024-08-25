@@ -2,15 +2,34 @@
 const nextConfig = {
     publicRuntimeConfig: {
         team: [
-            { name: "Uthsho", id: "747870498221719592", detail: "Founder", avatar: "/images/uthsho.gif" },
-            { name: "chrissch_dhil.dev", id: "592663451978039298", detail: "Lead Developer In-charge", avatar: "/images/chrissch.png" },
-            { name: "\"Shimeji\" Rin", id: "586913853804249090", detail: "Acting Lead Developer", avatar: "/images/rin.png" },
-            { name: "Aniket", id: "474255126228500480", detail: "Bot Developer", avatar: "/images/aniket.png" },
-            { name: "SyntaxSavior", id: "474529598504304641", detail: "Trial Web Developer", avatar: "/images/syntaxsavior.png" }
-        ],
-    },
-    env: {
-        BOT_TOKEN: "NzY4NzEwNjg1NDI4NTQ3NTk1.G--rCx.2gITDKlj12e77bIsbqYbvd4CHpA3O2aiedS4yY"
+            // Developers
+            {
+                name: "Uthsho", id: "747870498221719592", title: "Founder", type: "developer",
+                avatar: "/images/uthsho.gif", aboutMe: ""
+            },
+            {
+                name: "chrissch_dhil.dev", id: "592663451978039298", title: "Lead Developer In-charge", type: "developer",
+                avatar: "/images/chrissch.png", aboutMe: ""
+            },
+            {
+                name: "\"Shimeji\" Rin", id: "586913853804249090", title: "Acting Lead Developer", type: "developer",
+                avatar: "/images/rin.png", aboutMe: ""
+            },
+            {
+                name: "Aniket", id: "474255126228500480", title: "Bot Developer", type: "developer",
+                avatar: "/images/aniket.png", aboutMe: ""
+            },
+            {
+                name: "SyntaxSavior", id: "474529598504304641", title: "Trial Web Developer", type: "developer",
+                avatar: "/images/syntaxsavior.png", aboutMe: ""
+            },
+
+            // Staff (avatar is not compulsory but keep it just in case discord api fails)
+            {
+                name: "SyntaxSavior 2", id: "474529598504304641", title: "Server Manager", type: "staff",
+                avatar: "/images/syntaxsavior.png", aboutMe: ""
+            }
+        ]
     }
 };
 
