@@ -1,5 +1,6 @@
-import Team from "@/Components/Team";
+import TeamHome from "@/Components/TeamHome";
 import getConfig from "next/config";
+import Link from "next/link";
 const { publicRuntimeConfig } = getConfig();
 
 export default function Home() {
@@ -178,12 +179,12 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-12">
               <h2>About us</h2>
-              <p className="p-heading p-large">Meet our Development Team!</p>
+              <p className="p-heading p-large">Meet our Development Team! Check out full team <Link className="text-primary" style={{ textDecoration: "underline", fontSize: "bold" }} href="/team">here</Link></p>
             </div>
           </div>
           <div className="row">
             <div className="col-lg-12 ">
-              <Team team={team} />
+              <TeamHome team={team} />
             </div>
           </div>
         </div>

@@ -215,7 +215,7 @@ a.white {
 
 .navbar-nav .dropdown-menu {
   min-width: 0 !important;
-  background-color: rgb(48 53 59); 
+  background-color: rgb(48 53 59);
   box-shadow: none;
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
@@ -228,10 +228,12 @@ a.white {
   padding-right: 0.5rem;
   font: 600 0.875rem / 0.875rem Raleway, sans-serif;
 }
+
 .navbar-nav .dropdown-menu .dropdown-item:hover {
   background-color: inherit;
   color: rgb(87, 91, 96);
 }
+
 .navbar-nav .dropdown-menu {
   margin-left: -4.5rem !important;
 }
@@ -562,21 +564,23 @@ a.white {
 
 @media (max-width: 768px) {
   .navbar-nav .dropdown-menu {
-    background-color: rgb(48 53 59); 
+    background-color: rgb(48 53 59);
     border: none;
     box-shadow: none;
     padding-top: 0.5rem !important;
     padding-bottom: 0.5rem !important;
     margin-top: 0rem !important;
   }
-  
+
   .navbar-nav .dropdown-menu .dropdown-item {
     color: white;
   }
+
   .navbar-nav .dropdown-menu .dropdown-item:hover {
     background-color: inherit;
     color: rgb(87, 91, 96);
   }
+
   .navbar-nav .dropdown-menu {
     margin-left: 0rem !important;
   }
@@ -844,4 +848,150 @@ a.white {
     margin-right: 2.25rem;
     margin-left: 2.25rem;
   }
+}
+
+
+
+/* Team Page */
+
+@media (max-width:575px) {
+  .team-container {
+    margin-top: 3.5rem !important;
+    border-radius: 0 !important;
+  }
+
+  @media (max-width:540px) {
+    .team-container .team-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 424px) {
+      .team-container .team-header h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+
+.card {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+  width: 100%;
+  flex: 1;
+}
+
+.card-title {
+  margin-bottom: 0;
+}
+
+.info-btn {
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 13px;
+  cursor: pointer;
+}
+
+.info-btn:focus {
+  outline: none;
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.ReactModal__Content {
+  inset: unset !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  max-height: 80vh !important;
+  transform: translate(-50%, -50%) !important;
+  background: rgb(47, 45, 45) !important;
+  padding: 20px !important;
+  border: none !important;
+  border-radius: 15px !important;
+  max-width: 500px !important;
+  width: 90% !important;
+  overflow: -moz-scrollbars-none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none;  /* For Firefox */
+  margin-top: 2.5rem !important;
+}
+
+.ReactModal_Content::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.ReactModal__Content .modalHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.ReactModal__Content .image-wrapper {
+  overflow: hidden;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.ReactModal__Content .image-wrapper img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease 0s;
+}
+
+.ReactModal__Content .image-wrapper:hover img {
+  transform: scale(1.15);
+}
+
+.ReactModal__Content .text-content {
+  flex: 1;
+  background: none;
+}
+
+.ReactModal__Content .team-modal .about-me {
+  background-color: #050d19;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* // to add a underline to the h3 tag */
+.ReactModal__Content .team-modal .about-me h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #00a7bd;
+  margin: 10px 0;
+}
+
+.ReactModal__Content .team-modal .about-me .realAboutMe {
+  max-height: 50%;
+  box-sizing: border-box;
+  overflow: auto;
 }
