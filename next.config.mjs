@@ -10,7 +10,7 @@ const nextConfig = {
         ],
     },
     env: {
-        BOT_TOKEN: "NzY4NzEwNjg1NDI4NTQ3NTk1.G--rCx.2gITDKlj12e77bIsbqYbvd4CHpA3O2aiedS4yY"
+        BOT_TOKEN: "MTI3NzI4ODk4ODM5ODQ1Mjg0Nw.GkKuWN.NO8phcV7ceLziV_hg9p9J8TeXE8QJ9i1PcMiOo"
     }
 };
 
