@@ -29,7 +29,7 @@ const nextConfig = {
                 name: "SyntaxSavior 2", id: "474529598504304641", title: "Server Manager", type: "staff",
                 avatar: "/images/syntaxsavior.png", aboutMe: ""
             }
-        ],
+        ]
     }
 };
 
