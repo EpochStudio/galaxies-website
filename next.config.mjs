@@ -5,7 +5,7 @@ const nextConfig = {
             // Developers
             {
                 name: "Uthsho", id: "747870498221719592", title: "Founder", type: "developer",
-                avatar: "/images/uthsho.gif", aboutMe: ""
+                avatar: "/images/uthsho.gif", aboutMe: "The Founder of Galaxies."
             },
             {
                 name: "chrissch_dhil.dev", id: "592663451978039298", title: "Lead Developer In-charge", type: "developer",
