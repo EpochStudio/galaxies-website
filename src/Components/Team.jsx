@@ -73,6 +73,7 @@ const Team = ({ team: initialTeam }) => {
             )}
 
             {/* Modal for user details */}
+            {selectedUser && console.log(selectedUser)}
             {selectedUser && (
                 <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel={`About ${selectedUser.name}`} ariaHideApp={false}>
                     <div className="d-flex justify-content-between mb-4">
