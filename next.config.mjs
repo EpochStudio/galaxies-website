@@ -13,7 +13,7 @@ const nextConfig = {
             },
             {
                 name: "\"Shimeji\" Rin", id: "586913853804249090", title: "Acting Lead Developer", type: "developer",
-                avatar: "/images/rin.png", aboutMe: ""
+                avatar: "/images/rin.png", aboutMe: "experimenting so you (hopefully) don't have to"
             },
             {
                 name: "Aniket", id: "474255126228500480", title: "Bot Developer", type: "developer",
