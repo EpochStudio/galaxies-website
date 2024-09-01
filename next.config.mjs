@@ -20,7 +20,7 @@ const nextConfig = {
                 avatar: "/images/aniket.png", aboutMe: ""
             },
             {
-                name: "SyntaxSavior", id: "474529598504304641", title: "Trial Web Developer", type: "developer",
+                name: "SyntaxSavior", id: "474529598504304641", title: "Web Developer", type: "developer",
                 avatar: "/images/syntaxsavior.png", aboutMe: ""
             },
 
