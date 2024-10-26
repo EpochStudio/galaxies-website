@@ -16,6 +16,9 @@ const nextConfig = {
                 avatar: "/images/rin.png", aboutMe: "experimenting so you (hopefully) don't have to"
             },
             {
+                name: "SilentJungle", id: "738362958253522976", title: "System Administrator", type: "developer", aboutMe: ""
+            },
+            {
                 name: "Aniket", id: "474255126228500480", title: "Bot Developer", type: "developer",
                 avatar: "/images/aniket.png", aboutMe: ""
             },
